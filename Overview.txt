@@ -1,0 +1,51 @@
+Resources
+  Button artwork (dim/lit)
+  Button sounds
+  Start sound
+  Failure buzz sound
+
+Create UI
+  Background
+  Red/blue/yellow/green colour buttons
+  Start button
+  High score label/value
+  Turn label/value
+
+Go to idle
+  Colour buttons disabled
+  Start button enabled
+
+Start button clicked
+  Disable start button
+  Enable colour buttons
+  Choose first colour
+
+Go to playback
+  Figure out colour and inter-colour delay
+  Loop through whole memory sequence
+    Show lit colour for appropriate time
+    Play the matching sound
+    Wait for appropriate time
+  Set input to start of memory sequence
+  Activate the timeout trigger
+
+Colour button clicked
+  Light the button
+  If the right colour
+    Play the matching sound
+    Move input to the next item in the memory sequence
+    Reset the timeout trigger
+  Else
+    Finish the game
+  Endif
+
+Finishing the game
+  Play the buzzer sound
+  If the high score has been beaten
+    Update the high score
+  Endif
+  Re-enable the start button
+  Disable the colour buttons
+
+Timeout trigger expired
+  Finish the game
